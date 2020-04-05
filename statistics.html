@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Hygeia</title>
+
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
+
+  <!-- Custom fonts for this template-->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  <!-- Dropzone -->
+  <link href="vendor/dropzone-5.7.0/dist/dropzone.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">     
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo.svg">            
+          </a> 
+          
+          <ul class="navbar-nav d-none d-md-flex ml-4">
+            <li class="nav-link">
+              <a class="nav-link" href="index.html">LOCATIONS</a>
+            </li>
+            <li class="nav-link">
+              <a class="nav-link" href="demographics.html">DEMOGRAPHICS</a>
+            </li>
+            <li class="nav-link active">
+              <a class="nav-link" href="statistics.html">STATISTICS</a>
+            </li>        
+          </ul>
+       
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto"> 
+            
+            <li class="nav-item">                           
+                <a class="nav-link" href="">   
+                  <button class="btn btn-primary d-none d-sm-block"><i class="las la-plus la-sm"></i> Add something</button>
+                </a>             
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="lalse">
+                <i class="las la-bell la-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">3+</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="las la-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 12, 2019</div>
+                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-success">
+                      <i class="las la-donate text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 7, 2019</div>
+                    $290.29 has been deposited into your account!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="las la-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Spending Alert: We've noticed unusually high spending for your account.
+                  </div>
+                </a>
+              </div>
+            </li>           
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="lalse">
+                <span class="mr-2 d-none d-lg-inline text-secondary small">Adam Smith</span>
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">             
+                <a class="dropdown-item" href="profile.html">
+                  <i class="las la-cogs la-sm la-fw mr-2 text-gray-400"></i>
+                  My Profile
+                </a>                
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="las la-arrow-right la-sm la-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>           
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+             <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="lalse">
+                <i class="las la-bars la-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <a class="dropdown-item active" href="index.html">   
+                  <i class="las la-map-marker la-sm la-fw mr-2 text-gray-400"></i>            
+                  LOCATIONS
+                </a> 
+                <div class="dropdown-divider"></div> 
+                <a class="dropdown-item" href="demographics.html">   
+                  <i class="las la-street-view la-sm la-fw mr-2 text-gray-400"></i>            
+                  DEMOGRAPHICS
+                </a> 
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="statistics.html">   
+                  <i class="las la-chart-area la-sm la-fw mr-2 text-gray-400"></i>            
+                  STATISTICS
+                </a>  
+                <div class="dropdown-item mt-4" href="">   
+                  <a href="" class="btn btn-primary shadow-sm btn-block w-100"><i class="las la-plus la-sm"></i> Add something</a>              
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid min-v-100">  
+			<div class="row">
+            <!-- Area Chart -->
+				<div class="col-lg-12">
+				  <div class="card mb-4">
+					<!-- Card Header - Dropdown -->
+					<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+					  <h6 class="m-0">Data Per Day</h6>                  
+					</div>
+					<!-- Card Body -->
+					<div class="card-body">
+						<div id="covid19-cy" style="width: 100% ;height:150px;">
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="row">
+            <!-- Area Chart -->
+				<div class="col-lg-12">
+				  <div class="card mb-4">
+					<!-- Card Header - Dropdown -->
+					<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+					  <h6 class="m-0">Infection Per Day (Tested vs Untested)</h6>                  
+					</div>
+					<!-- Card Body -->
+					<div class="card-body">
+						<div id="covid19-ipd-tut" style="width: 100% ;height:150px;">
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="row">
+            <!-- Area Chart -->
+				<div class="col-lg-12">
+				  <div class="card mb-4">
+					<!-- Card Header - Dropdown -->
+					<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+					  <h6 class="m-0">Infection Per Day (Reported vs Unreported)</h6>                  
+					</div>
+					<!-- Card Body -->
+					<div class="card-body">
+						<div id="covid19-ipd-rur" style="width: 100% ;height:150px;">
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-12">
+				  <div class="card mb-4">
+					<!-- Card Header - Dropdown -->
+					<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+					  <h6 class="m-0">World Chart</h6>                  
+					</div>
+					<!-- Card Body -->
+					<div class="card-body">
+					  <div id="covid19-world" style="width: 100% ;height:1200px;"></div>
+					</div>
+				  </div>
+				</div>
+          </div>
+		</div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2019</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="las la-angle-up"></i>
+  </a>
+
+   <!-- Logout Modal-->
+   <div class="modal lade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal"><i class="las la-arrow-left la-sm"></i> Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+  <!-- Dropzone -->
+  <script src="vendor/dropzone-5.7.0/dist/dropzone.js"></script>
+  
+  <!-- Multiselect -->
+  <script src="vendor/multiselect/chosen.jquery.js"></script>
+  <script src="vendor/multiselect/chosen.proto.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.7.0/echarts.min.js"></script>
+
+  <script>
+	
+	$(document).ready(function(){
+		//$(".chosen-select").chosen()
+		//var settings = {
+		//	"async": true,
+		//	"crossDomain": true,
+		//	"url": "https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?country=Pakistan",
+		//	"method": "GET",
+		//	"headers": {
+		//		"x-rapidapi-host": "covid-19-coronavirus-statistics.p.rapidapi.com",
+		//		"x-rapidapi-key": "050a20cdb1msha194a9466522484p1c0233jsne9ac2739bf3b"
+		//	}
+		//}
+		//
+		//$.ajax(settings).done(function (response) {
+		//debugger;
+		//	console.log(response);
+		//});
+        $.get("https://pomber.github.io/covid19/timeseries.json", function (e) {
+			
+			var country = 'Cyprus';//GetUrlParameter('name');
+			//$('#country').text('');
+			var worldTotal;
+			var responseHistoryConfirmed = [];
+			var responseHistoryDeaths = [];
+			var responseHistoryRecovered = [];
+			var sum = 0;
+			
+			var length = e[country].length - 1;
+			var start = e[country][0]["date"];
+			var end = e[country][length]["date"];
+			var infectedTotal = e[country][length]["confirmed"];
+			var deathTotal = e[country][length]["deaths"];
+			var recoveredTotal = e[country][length]["recovered"];
+			var activeTotal = infectedTotal - deathTotal - recoveredTotal;
+			
+			$.each(e[country], function(i,v){
+				var temp = [];
+				temp.push(v.date);
+				temp.push(v.confirmed);
+				responseHistoryConfirmed.push(temp);
+				temp = [];
+				temp.push(v.date);
+				temp.push(v.deaths);
+				responseHistoryDeaths.push(temp);
+				temp = [];
+				temp.push(v.date);
+				temp.push(v.recovered);
+				responseHistoryRecovered.push(temp);		
+			});
+			
+			var responseWorld = [];
+			$.each(e, function(i,v){
+				var confirmed = v[v.length - 1]["confirmed"];
+				responseWorld.push({
+					name : i,
+					value : confirmed
+				});
+				sum = sum + confirmed;
+			});
+			
+			DrawChart(start, end,'covid19-cy', 'Confirmed', 'Deaths', 'Recovered',responseHistoryConfirmed,responseHistoryDeaths ,responseHistoryRecovered , 'line');
+			DrawChart(start, end,'covid19-ipd-tut', 'Tested', 'Untested',  null,responseHistoryConfirmed,responseHistoryDeaths ,null , 'bar');
+			DrawChart(start, end,'covid19-ipd-rur', 'Reported', 'Unreported', null ,responseHistoryConfirmed,responseHistoryDeaths ,null , 'bar');
+			DrawPieChart('covid19-world', sum, 'Country', responseWorld);			
+        });
+		
+		
+	});
+	
+	function DrawChart(start, end, id, seriesName1, seriesName2, seriesName3, array1, array2, array3, type){
+	
+			var series = [];
+			series.push({
+					name: seriesName1,
+                    data: array1,
+                    type: type,
+                });
+				series.push({
+					name: seriesName2,
+                    data: array2,
+                    type: type,
+                });
+			if(seriesName3){
+				series.push({
+					name: seriesName3,
+                    data: array3,
+                    type: type,
+                });
+			}
+            var HistChart = echarts.init(document.getElementById(id));
+            hist_opt = {
+                color: ['#00AEEF','#00364A','#1cc88a','#ffd200','#e74a3b','#b7c7cf','#84939b','#A3E2FB','#FF8500'],
+                grid: {
+                    left: '80px',
+                    right: '40px',
+                    bottom: '20%',
+                    top: '15%'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    formatter: function (params) {
+                        var dt = params[0]['data'][0].split(".")[0].replace("T", " ");
+                        var confirmed = params[0]['data'][1];
+                        var deaths = params[1]['data'][1];
+						var tooltip = dt + "<BR> "+seriesName1 +" : " + confirmed + "<BR> "+seriesName2+" : " + deaths;
+						if(seriesName3){
+							var recovered = params[2]['data'][1];
+							tooltip = tooltip + "<BR> "+seriesName3+"  : " + recovered;
+						}
+                         
+						return tooltip;
+                    }
+                },
+                xAxis: {
+                    axisLine: {
+                        lineStyle: {
+                            color: '#333'
+                        }
+                    },
+                    type: 'time',
+                    splitNumber: 8,
+                    min: start,
+                    max: end,
+
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLabel: {
+                        formatter: '{value}'
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#333'
+                        }
+                    }
+                },
+                series: series
+            };
+            HistChart.setOption(hist_opt);			
+	}
+	
+	function DrawPieChart(id, title, seriesName, dataArray) {
+	// based on prepared DOM, initialize echarts instance
+            var uirdChart = echarts.init(document.getElementById(id));
+            // specify chart configuration item and data
+            var option = {
+                color: ['#ffd200','#1cc88a','#e74a3b','#b7c7cf','#84939b','#A3E2FB','#FF8500','#00AEEF','#00364A'],
+                title: [{
+                    text: title,
+                    x: "center",
+                    y: "45%",
+                    textStyle: {
+                        align: 'center',
+                        verticalAlign: 'middle',
+                        color: '#ccc',
+                        fontWeight: 'bold',
+                        fontSize: 30
+                    }
+                }],
+                tooltip: {
+                    formatter: function (params) {
+                        return params['name'] + '<BR>Confirmed : ' + params['value'];
+                    }
+                },
+                calculable: !0,
+                series: [{
+                    name: seriesName,
+                    type: "pie",
+                    radius: ["25%", "70%"],
+                    center: ["50%", "48%"],
+                    startAngle: 0,
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: !0,
+                                position: "outer"
+                            },
+                            labelLine: {
+                                show: !0
+                            }
+                        }
+                    },
+                        data: dataArray
+                }]
+            };
+
+            // use configuration item and data specified to show chart
+            uirdChart.setOption(option);
+	}
+	
+	function GetUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+  </script>
+
+  
+    
+
+
+
+</body>
+
+</html>

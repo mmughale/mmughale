@@ -212,7 +212,7 @@
                     <div class="row">
 
                         <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
+                        <div class="col-xl-12 col-lg-12">
                             <div class="card mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -220,12 +220,15 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <div class="chart-area">
+                                    <div class="chart-area" style="height: 30rem;">
                                         <div id="floating-panel">
-                                            <button onclick="toggleHeatmap()">Filter A</button>
-                                            <button onclick="changeGradient()">Filter B</button>
-                                            <button onclick="changeRadius()">Filter C</button>
-                                            <button onclick="changeOpacity()">Filter D</button>
+                                            <button onclick="toggleButtonReported()" id="btnReported">Reported</button>
+                                            <button onclick="toggleButtonTested()" id="btnTested">Tested</button>
+                                            <button>Level</button>
+                                            <button>Infected</button>
+                                            <button onclick="toggleButtonMonitored()" id="btnMonitored">Monitored</button>
+                                            <button>Age</button>
+                                            <button>Gender</button>
                                         </div>
                                         <div id="map"></div>
                                     </div>
@@ -233,115 +236,6 @@
                             </div>
                         </div>
 
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0">Vessels overview</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="las la-circle  text-success bg-success rounded"></i> Cargo
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="las la-circle text-warning bg-warning rounded"></i> Tanker
-                                        </span>
-                                        <span class="mr-2"></span>
-                                        <i class="las la-circle text-primary bg-primary rounded"></i> Other
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- DataTales Example -->
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered" id="dataTable" cellspacing="0">
-                                            <thead>
-                                                <tr>
-                                                    <th>Title</th>
-                                                    <th>User name</th>
-                                                    <th>Job title</th>
-                                                    <th>Status</th>
-                                                    <th>Date of expiration</th>
-                                                    <th>Type</th>
-                                                    <th>Category</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><a href="certificate-details.html">Certificate of safety</a></td>
-                                                    <td>Carlos Santana</td>
-                                                    <td>Sailor</td>
-                                                    <td>
-                                                        <span class="btn btn-danger btn-sm mr-2 btn-round">
-                                                            <i class="las la-times"></i>
-                                                        </span>
-                                                        Missing
-                                                    </td>
-                                                    <td>-</td>
-                                                    <td>Optional</td>
-                                                    <td>Certificate of safety</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="certificate-details.html">Certificate of health</a></td>
-                                                    <td>Mark Adams</td>
-                                                    <td>Sailor</td>
-                                                    <td>
-                                                        <span class="btn btn-primary btn-sm mr-2 btn-round">
-                                                            <i class="las la-search"></i>
-                                                        </span>
-                                                        In review
-                                                    </td>
-                                                    <td>10 April 2020</td>
-                                                    <td>Required</td>
-                                                    <td>Health certificates</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="certificate-details.html">Bachelor degree in cooking</a></td>
-                                                    <td>Tom Wats</td>
-                                                    <td>Cook</td>
-                                                    <td>
-                                                        <span class="btn btn-success btn-sm mr-2 btn-round">
-                                                            <i class="las la-check"></i>
-                                                        </span>
-                                                        Active
-                                                    </td>
-                                                    <td>15 Apr 2020</td>
-                                                    <td>Required</td>
-                                                    <td>School degrees</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="certificate-details.html">Certificate of non-convictions</a></td>
-                                                    <td>Andrew Mathews</td>
-                                                    <td>Sailor</td>
-                                                    <td>
-                                                        <span class="btn btn-warning btn-sm mr-2 btn-round">
-                                                            <i class="las la-times"></i>
-                                                        </span>
-                                                        Inactive
-                                                    </td>
-                                                    <td>28 Mar 2020</td>
-                                                    <td>Required</td>
-                                                    <td>Conviction certificates</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
@@ -435,17 +329,128 @@
         var map, heatmap;
 
         function initMap() {
+            var styledMapType = new google.maps.StyledMapType(
+                [
+                    {
+                        "featureType": "all",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": "32"
+                            },
+                            {
+                                "lightness": "-3"
+                            },
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "weight": "1.18"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape.man_made",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": "-70"
+                            },
+                            {
+                                "lightness": "14"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": "100"
+                            },
+                            {
+                                "lightness": "-14"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "lightness": "12"
+                            }
+                        ]
+                    }
+                ],
+                { name: 'Styled Map' });
+
             map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 8,
+                zoom: 9,
                 center: country,
-                mapTypeId: google.maps.MapTypeId.HYBRID
+                mapTypeIds: ['roadmap', 'hybrid', 'terrain',
+                    'styled_map'],
+                disableDefaultUI: true
             });
+            
+            map.mapTypes.set('styled_map', styledMapType);
+            map.setMapTypeId('styled_map');
 
             heatmap = new google.maps.visualization.HeatmapLayer({
                 data: getPoints(),
                 map: map
             });
             
+            heatmap.set('radius', heatmap.get('radius') ? null : 20);
+
  	        var geocoder = new google.maps.Geocoder();
 	        geocoder.geocode( { 'address': country }, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
@@ -463,20 +468,14 @@
 
         function changeGradient() {
             var gradient = [
-                'rgba(0, 255, 255, 0)',
-                'rgba(0, 255, 255, 1)',
-                'rgba(0, 191, 255, 1)',
-                'rgba(0, 127, 255, 1)',
-                'rgba(0, 63, 255, 1)',
-                'rgba(0, 0, 255, 1)',
-                'rgba(0, 0, 223, 1)',
-                'rgba(0, 0, 191, 1)',
-                'rgba(0, 0, 159, 1)',
-                'rgba(0, 0, 127, 1)',
-                'rgba(63, 0, 91, 1)',
-                'rgba(127, 0, 63, 1)',
-                'rgba(191, 0, 31, 1)',
-                'rgba(255, 0, 0, 1)'
+                '#FF8500',
+                '#FF8500',
+                '#FF8500',
+                '#FF8500',
+                '#FF8500',
+                '#FF8500',
+                '#FF8500',
+                '#FF8500'
             ]
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
@@ -488,15 +487,35 @@
         function changeOpacity() {
             heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
         }
+        
+        function toggleButtonReported() {
+            var elem = document.getElementById("btnReported");
+            if (elem.innerText == "Reported") elem.innerText = "UnReported";
+            else elem.innerText = "Reported";
+            toggleHeatmap();
+        }
 
+        function toggleButtonTested() {
+            var elem = document.getElementById("btnTested");
+            if (elem.innerText == "Tested") elem.innerText = "UnTested";
+            else elem.innerText = "Tested";
+            changeRadius();
+        }
+
+        function toggleButtonMonitored() {
+            var elem = document.getElementById("btnMonitored");
+            if (elem.innerText == "Monitored") elem.innerText = "UnMonitored";
+            else elem.innerText = "Monitored";
+            changeRadius();
+        }
         // Heatmap data: 500 Points
         function getPoints() {
             var heatMapData = [
-              {location: new google.maps.LatLng(35.185566, 33.382275), weight: 0.5},
+              {location: new google.maps.LatLng(35.185566, 33.382275), weight: 22.5},
               new google.maps.LatLng(-37.764648, 145.188339),
-              {location: new google.maps.LatLng(-37.764648, 145.186339), weight: 2},
-              {location: new google.maps.LatLng(-37.764648, 145.187339), weight: 3},
-              {location: new google.maps.LatLng(-37.764648, 145.181339), weight: 2},
+              {location: new google.maps.LatLng(-37.764648, 145.186339), weight: 20},
+              {location: new google.maps.LatLng(-37.764648, 145.187339), weight: 30},
+              {location: new google.maps.LatLng(-37.764648, 145.181339), weight: 21},
               new google.maps.LatLng(-37.770069, 145.156525),
               {location: new google.maps.LatLng(-37.770069, 145.156625), weight: 0.5},
 
@@ -516,7 +535,7 @@
         }
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc2LvLTSmF0aFSMFk-pra88ZvKF_NYc5U&libraries=visualization&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQPfKmUQwlrIYnvSVPNpO44jhJoUNTEdc&libraries=visualization&callback=initMap">
     </script>
 </body>
 
