@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Seacheck - Profiles</title>
+
+  <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+
+  <!-- Custom fonts for this template-->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles for this template-->
+  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">     
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column  bg-primary">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-dark bg-primary topbar mb-4 static-top">
+          <a class="navbar-brand" href="index.html">
+            <img src="../img/logo-white.svg">            
+          </a>        
+          
+          <ul class="navbar-nav d-none d-md-flex ml-4">
+            <li class="nav-link">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-link">
+              <a class="nav-link" href="vessels.html">VESSELS</a>
+            </li>
+            <li class="nav-link">
+              <a class="nav-link" href="crew.html">CREW</a>
+            </li>
+            <li class="nav-link">
+              <a class="nav-link" href="certificates.html">CERTIFICATES</a>
+            </li>
+          </ul>
+       
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto"> 
+            
+            <li class="nav-item">                           
+                <a class="nav-link" href="certificate-details.html">   
+                  <button class="btn btn-secondary d-none d-sm-block"><i class="las la-plus la-sm"></i> Add certificate</button>
+                </a>             
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="lalse">
+                <i class="las la-bell la-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">3+</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="las la-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 12, 2019</div>
+                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-success">
+                      <i class="las la-donate text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 7, 2019</div>
+                    $290.29 has been deposited into your account!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="las la-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Spending Alert: We've noticed unusually high spending for your account.
+                  </div>
+                </a>
+              </div>
+            </li>           
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="lalse">
+                <span class="mr-2 d-none d-lg-inline text-white small">Adam Smith</span>
+                <img class="img-profile rounded-circle" src="../img/profile.jpg">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">             
+                <a class="dropdown-item" href="profile.html">
+                  <i class="las la-cogs la-sm la-fw mr-2 text-gray-400"></i>
+                  My Profile
+                </a>                
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="las la-arrow-right la-sm la-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="lalse">
+                <i class="las la-bars la-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <a class="dropdown-item" href="index.html">   
+                  <i class="las la-home la-sm la-fw mr-2 text-gray-400"></i>            
+                  Home
+                </a> 
+                <div class="dropdown-divider"></div> 
+                <a class="dropdown-item" href="vessels.html">   
+                  <i class="las la-ship la-sm la-fw mr-2 text-gray-400"></i>            
+                  Vessels
+                </a> 
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="crew.html">   
+                  <i class="las la-user-friends la-sm la-fw mr-2 text-gray-400"></i>            
+                  Crew
+                </a>               
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="certificates.html">   
+                  <i class="las la-certificate la-sm la-fw mr-2 text-gray-400"></i>    
+                  Certificates
+                </a>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-item" href="certificate-details.html">   
+                  <a href="certificate-details.html" class="btn btn-secondary shadow-sm btn-block w-100"><i class="las la-plus la-sm"></i> Add certificate</a>  
+                  <a href="vessel-add.html" class="btn btn-primary shadow-sm btn-block w-100"><i class="las la-plus la-sm"></i> Add vessel</a>
+                  <a href="crew-add.html" class="btn btn-primary shadow-sm btn-block w-100"><i class="las la-plus la-sm"></i> Add crew</a>
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">  
+          <!-- Content Row -->
+
+          <div class="row justify-content-center">
+
+            <div class="col-xl-4 col-lg-6">
+              <div class="card mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center bg-primary ">                                    
+                  <span>
+                    <img class="img-profile rounded-circle mr-3" src="../img/profile.jpg">
+                  </span> 
+                  <h3 class="m-0 text-white">Adam Smith</h3>                                  
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>First name</label>
+                    <input class="form-control" placeholder="Adam">
+                  </div>
+                  <div class="form-group">
+                    <label>Last name</label>
+                    <input class="form-control" placeholder="Smith">
+                  </div>
+                  <div class="form-group">
+                    <label>Date of birth</label>
+                    <input class="form-control" placeholder="dd/mm/yyyy">
+                  </div>
+                  <div class="form-group">
+                    <label>Country</label>
+                    <input class="form-control" placeholder="Croatia">
+                  </div>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control" placeholder="adam@gmail.com">
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header pt-3 pb-2 d-flex justify-content-start flex-column-reverse flex-sm-row">  
+                  <button class="btn btn-primary mr-2 mb-2" type="button" data-toggle="modal" data-target="#passwordResetModal"><i class="las la-redo-alt la-sm text-white-50"></i> Reset password</button>          
+                  <button class="btn btn-secondary mb-2" type="button" data-toggle="modal" data-target="#passwordModal"><i class="las la-unlock-alt la-sm"></i> Change password</button>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input class="form-control" placeholder="************">
+                    </div>                  
+                  </form>             
+                </div>
+              </div>
+
+              <div class="card mb-4">                
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label>Role name</label>
+                      <input class="form-control" placeholder="Agent manager" disabled>
+                    </div>                 
+                  </form>             
+                </div>
+              </div>
+              
+
+              <!-- if captain-->
+           
+              <div class="card mb-4">  
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label>Vessel name / IMO</label>
+                      <select data-placeholder="Choose" class="chosen-select w-100">
+                        <option></option>    
+                        <option>Mary Jane / 123456789</option>        
+                        <option>Ane Lea / 123456789</option>                          
+                      </select>                  
+                    </div>                 
+                  </form>
+                </div>
+              </div>
+
+                <!-- if agent-->
+
+              <div class="card mb-4">
+               
+                <!-- Card Body -->
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label>Agency name</label>
+                      <input class="form-control" placeholder="Nevtech Co.">
+                    </div>
+                  </form>
+                </div>               
+              </div>
+
+              <div class="d-flex mb-5 justify-content-between flex-column-reverse flex-sm-row">
+                <a href="index.html" class="btn btn-dark mr-2 mb-2"><i class="las la-arrow-left la-sm"></i> Back</a>
+                <button class="btn btn-secondary mb-2"><i class="las la-check la-sm"></i> Save changes</button>
+              </div>
+            </div>          
+            
+
+           
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2019</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="las la-angle-up"></i>
+  </a>
+
+   <!-- Logout Modal-->
+   <div class="modal lade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button class="btn btn-primary" type="button" data-dismiss="modal"><i class="las la-arrow-left la-sm"></i> Cancel</button>
+          <a class="btn btn-secondary" href="../login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Password reset Modal-->
+  <div class="modal lade" id="passwordResetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Reset password</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Are you sure you want to reset password for this user?</div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button class="btn btn-primary" type="button" data-dismiss="modal"><i class="las la-arrow-left la-sm"></i> Cancel</button>
+          <a class="btn btn-secondary" href="index.html">Resset</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Password Modal-->
+    <div class="modal lade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Password</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Current password</label>
+              <input class="form-control" placeholder="Enter current password">
+            </div>
+            <div class="form-group">
+              <label>New password</label>
+              <input class="form-control" placeholder="Enter new password">
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <button class="btn btn-primary" type="button" data-dismiss="modal"><i class="las la-arrow-left la-sm"></i> Cancel</button>
+            <a class="btn btn-secondary" href="index.html">Change</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="../vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../js/demo/chart-area-demo.js"></script>
+  <script src="../js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>

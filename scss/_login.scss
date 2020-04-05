@@ -1,0 +1,78 @@
+// Pulling these images from Unsplash
+// Toshi the dog from https://unsplash.com/@charlesdeluvio - what a funny dog...
+
+.bg-login-image {
+  background: url('https://source.unsplash.com/K4mSJ7kc0As/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-register-image {
+  background: url('https://source.unsplash.com/Mv9hjnEUHR4/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-password-image {
+  background: url('https://source.unsplash.com/oWTW-jNGl9I/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+form.user {
+
+  .custom-checkbox.small {          
+    .custom-control-label {
+      line-height: 1.5rem;
+      padding-left: 1rem;
+      color: $gray-dark-blue;  
+      &::before{
+        background-color: transparent;
+        border: 1px solid $gray-dark-blue;
+        left: -0.5rem;        
+        }
+    }
+  }
+
+  .form-control-user {
+    background-color: $white;
+    border: 1px solid $gray-blue;
+    border-radius: 10rem;
+    padding: 0.75rem 1rem;
+    color: $gray-dark-blue;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    height: auto;
+    &::placeholder {
+      color: $gray-blue;
+    }
+  }
+
+  .btn-user {
+    font-size: 0.9rem;
+    border-radius: 10rem;
+    padding: 0.75rem 1rem;
+  }
+
+}
+
+.login {
+  background-image:  url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;  
+  background-color: $gray-light-blue;
+  background-size: 100% auto;
+  padding-bottom: 10%;
+  @include media-breakpoint-down(sm) {
+    background-image:  url(../img/bg-mobile.jpg);
+  }
+}
+
+
+
+.btn-transparent {
+  @include button-variant($gray-dark-blue, $gray-dark-blue);
+}
+
+
+
